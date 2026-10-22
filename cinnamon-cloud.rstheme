@@ -1,0 +1,262 @@
+/* rs-theme-name: Cinnamon Cloud */
+/* rs-theme-is-dark: FALSE */
+
+/* Palette
+   Background        #F3F9FF
+   Default text      #22324A
+   Keywords, section headers, errors (bold)  #2A63AE
+   Functions         #A63E70
+   Strings           #7E5228
+   Numbers, TRUE/FALSE/NULL  #28706D
+   Comments (italic) #7A8A9E
+   Accent: cursor, matching brackets, selected tab  #5E9EDC
+   Nested parentheses  #22324A / #5A6E8A / #8898AD
+*/
+
+/* ---------- Editor ---------- */
+.ace_editor,
+.rstudio-themes-flat.ace_editor_theme,
+.rstudio-themes-flat .ace_editor_theme {
+  background-color: #F3F9FF;
+  color: #22324A;
+}
+
+/* Gutter (line numbers) */
+.ace_gutter {
+  background-color: #E6F0FB;
+  color: #66768C;
+}
+.ace_gutter-active-line {
+  background-color: #CFE3F8;
+  color: #22324A;
+}
+.ace_print-margin {
+  width: 1px;
+  background-color: #C5DAF0;
+}
+
+/* Cursor, selection, current line */
+.ace_cursor {
+  color: #5E9EDC;
+}
+.ace_marker-layer .ace_selection {
+  background-color: #F6D6E6;
+}
+.ace_marker-layer .ace_active-line {
+  background-color: #E0EEFC;
+}
+.ace_marker-layer .ace_selected-word {
+  border: 1px solid #2A63AE;
+}
+
+/* Matching brackets: underline */
+.ace_marker-layer .ace_bracket {
+  margin: 0;
+  border: none;
+  border-bottom: 2px solid #5E9EDC;
+}
+
+/* Syntax */
+.ace_identifier {
+  color: #22324A;
+}
+.ace_keyword {
+  color: #2A63AE;
+  font-weight: bold;
+}
+.ace_keyword.ace_operator {
+  color: #22324A;
+  font-weight: normal;
+}
+.ace_constant.ace_language,
+.ace_constant.ace_numeric {
+  color: #28706D;
+}
+.ace_string {
+  color: #7E5228;
+}
+.ace_support.ace_function {
+  color: #A63E70;
+}
+
+/* Comments: quieter */
+.ace_comment {
+  color: #7A8A9E;
+  font-style: italic;
+}
+.ace_comment.ace_keyword {
+  color: #A63E70;
+  font-style: italic;
+}
+
+/* Section headers (# Title ----): bold landmarks */
+.ace_comment.ace_sectionhead {
+  color: #2A63AE;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Parentheses by nesting level
+   (turn on Rainbow parentheses in Global Options > Code > Display) */
+.ace_paren,
+.ace_paren_color_0,
+.ace_paren_color_3,
+.ace_paren_color_6 {
+  color: #22324A;
+}
+.ace_paren_color_1,
+.ace_paren_color_4 {
+  color: #5A6E8A;
+}
+.ace_paren_color_2,
+.ace_paren_color_5 {
+  color: #8898AD;
+}
+
+/* R Markdown / Quarto */
+.ace_marker-layer .ace_foreign_line {
+  background-color: #E8F2FD;
+}
+.ace_markup.ace_heading {
+  color: #2A63AE;
+  font-weight: bold;
+}
+.ace_markup.ace_href {
+  color: #A63E70;
+  text-decoration: underline;
+}
+
+/* Console and debugging */
+.ace_console_error {
+  color: #2A63AE;
+  font-weight: bold;
+}
+.ace_marker-layer .ace_active_debug_line {
+  background-color: #E2D0E0;
+}
+
+
+/* =====================================================================
+   RStudio interface (tabs, panes, toolbars, menus, scrollbars)
+   These use RStudio's internal class names, which are not officially
+   supported and may change between versions. If an update breaks
+   something, delete this section and the editor colors above still work.
+   ===================================================================== */
+
+/* Space behind and between panes, and the strip under the main toolbar */
+body.rstudio-themes-flat,
+.rstudio-themes-flat.rstudio-themes-dark,
+.rstudio-themes-flat .rstudio-themes-dark,
+.rstudio-themes-flat .rstudio-themes-default,
+.rstudio-themes-flat .rstudio-themes-background,
+.rstudio-themes-flat [role="banner"] + [role="navigation"] > table > tbody > tr > td,
+.rstudio-themes-flat header + [role="navigation"] > table > tbody > tr > td,
+.rstudio-themes-flat .gwt-SplitLayoutPanel-HDragger,
+.rstudio-themes-flat .gwt-SplitLayoutPanel-VDragger {
+  background-color: #D5E5F6 !important;
+}
+
+/* Pane frames, including the focus ring around the active pane */
+.rstudio-themes-flat .windowframe,
+.rstudio-themes-flat .windowframe:focus-within,
+.rstudio-themes-flat .windowframe > div,
+.rstudio-themes-flat .rstudio-themes-border,
+.rstudio-themes-flat :-webkit-any(.windowframe, .rstheme_minimizedWindowObject) > div:last-child {
+  border-color: #C5DAF0 !important;
+  outline-color: #C5DAF0 !important;
+  box-shadow: none !important;
+}
+.rstudio-themes-flat *:focus,
+.rstudio-themes-flat *:focus-visible {
+  outline-color: #5E9EDC !important;
+}
+
+/* Tab strip */
+.rstudio-themes-flat .gwt-TabLayoutPanelTabs,
+.rstudio-themes-flat .rstheme_multiPodUtilityTabArea {
+  background-color: #E6F0FB !important;
+}
+
+/* Unselected tabs: quiet */
+.rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter {
+  background-color: #E6F0FB !important;
+  border-top: 2px solid transparent !important;
+}
+.rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .gwt-Label {
+  color: #66768C !important;
+}
+.rstudio-themes-flat .gwt-TabLayoutPanelTab:hover .rstheme_tabLayoutCenter {
+  background-color: #DAE8F7 !important;
+}
+
+/* Selected tab: matches the editor, with an accent top bar */
+.rstudio-themes-flat .gwt-TabLayoutPanelTab.gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter,
+.rstudio-themes-flat .windowframe:focus-within .gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
+  background-color: #F3F9FF !important;
+  border-top: 2px solid #5E9EDC !important;
+  border-left-color: #C5DAF0 !important;
+  border-right-color: #C5DAF0 !important;
+}
+.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .gwt-Label {
+  color: #22324A !important;
+  font-weight: bold;
+}
+
+/* Minimized panes */
+.rstudio-themes-flat .rstheme_minimizedWindowObject .rstheme_center {
+  background-color: #E6F0FB !important;
+}
+
+/* Toolbars */
+.rstudio-themes-flat .rstheme_toolbarWrapper,
+.rstudio-themes-flat .rstheme_secondaryToolbar,
+.rstudio-themes-flat .dataGridHeader {
+  background-color: #E6F0FB !important;
+  border-color: #C5DAF0 !important;
+}
+.rstudio-themes-flat .rstheme_toolbarWrapper .gwt-Label,
+.rstudio-themes-flat .rstheme_toolbarWrapper a,
+.rstudio-themes-flat .rstheme_toolbarWrapper button {
+  color: #22324A !important;
+}
+
+/* Menus and popups */
+.rstudio-themes-flat .popupMiddleCenter,
+.rstudio-themes-flat .menuPopupMiddleCenter,
+.rstudio-themes-flat .suggestPopupMiddleCenter,
+.rstudio-themes-flat .themedPopupPanel,
+.rstudio-themes-flat .gwt-PopupPanel .popupContent {
+  background-color: #E6F0FB !important;
+  color: #22324A !important;
+}
+.rstudio-themes-flat .gwt-MenuItem.gwt-MenuItem-selected,
+.rstudio-themes-flat .item.item-selected {
+  background-color: #F6D6E6 !important;
+  color: #22324A !important;
+}
+
+/* Scrollbars */
+.rstudio-themes-flat {
+  scrollbar-color: #ADC1D7 #E6F0FB;
+}
+.rstudio-themes-flat ::-webkit-scrollbar-track {
+  background-color: #E6F0FB;
+}
+.rstudio-themes-flat ::-webkit-scrollbar-thumb {
+  background-color: #ADC1D7;
+  border-radius: 6px;
+}
+.rstudio-themes-flat ::-webkit-scrollbar-thumb:hover {
+  background-color: #8396AD;
+}
+
+
+/* Corner doodle in the console (original artwork). Delete this block to remove it.
+   Targets the scrolling area that holds RStudio's console output. RStudio does not
+   document these IDs, so this is a best guess. */
+.rstudio-themes-flat :has(> #rstudio_console_output) {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZyBvcGFjaXR5PSIwLjU1Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3OCw3MCkgc2NhbGUoMS42KSIgZmlsbD0iIzlDQzhGMCI+PGNpcmNsZSBjeD0iLTE0IiBjeT0iNCIgcj0iMTIiLz48Y2lyY2xlIGN4PSIyIiBjeT0iLTYiIHI9IjE2Ii8+PGNpcmNsZSBjeD0iMTgiIGN5PSI0IiByPSIxMiIvPjxyZWN0IHg9Ii0yNiIgeT0iNCIgd2lkdGg9IjU2IiBoZWlnaHQ9IjEyIiByeD0iNiIvPjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNjAsMzYpIHNjYWxlKDAuOSkiIGZpbGw9IiNCNUQ3RjQiPjxjaXJjbGUgY3g9Ii0xNCIgY3k9IjQiIHI9IjEyIi8+PGNpcmNsZSBjeD0iMiIgY3k9Ii02IiByPSIxNiIvPjxjaXJjbGUgY3g9IjE4IiBjeT0iNCIgcj0iMTIiLz48cmVjdCB4PSItMjYiIHk9IjQiIHdpZHRoPSI1NiIgaGVpZ2h0PSIxMiIgcng9IjYiLz48L2c+PGNpcmNsZSBjeD0iMTM4IiBjeT0iMTQ2IiByPSIzOCIgZmlsbD0iI0UzQjA3RSIvPjxwb2x5bGluZSBwb2ludHM9IjEzOC4wLDE0Ni4wIDEzOC4yLDE0Ni4wIDEzOC4zLDE0Ni4xIDEzOC41LDE0Ni4xIDEzOC42LDE0Ni4yIDEzOC43LDE0Ni40IDEzOC44LDE0Ni41IDEzOC45LDE0Ni43IDEzOC45LDE0Ni45IDEzOS4wLDE0Ny4xIDEzOC45LDE0Ny4zIDEzOC45LDE0Ny41IDEzOC44LDE0Ny44IDEzOC43LDE0OC4wIDEzOC41LDE0OC4yIDEzOC40LDE0OC40IDEzOC4xLDE0OC42IDEzNy45LDE0OC43IDEzNy42LDE0OC45IDEzNy4zLDE0OS4wIDEzNy4wLDE0OS4wIDEzNi42LDE0OS4xIDEzNi4zLDE0OS4xIDEzNS45LDE0OS4wIDEzNS41LDE0OC45IDEzNS4xLDE0OC44IDEzNC43LDE0OC42IDEzNC40LDE0OC40IDEzNC4wLDE0OC4xIDEzMy43LDE0Ny44IDEzMy40LDE0Ny40IDEzMy4xLDE0Ny4wIDEzMi45LDE0Ni42IDEzMi43LDE0Ni4xIDEzMi41LDE0NS42IDEzMi41LDE0NS4wIDEzMi40LDE0NC41IDEzMi40LDE0My45IDEzMi41LDE0My4zIDEzMi43LDE0Mi43IDEzMi45LDE0Mi4xIDEzMy4xLDE0MS41IDEzMy41LDE0MS4wIDEzMy45LDE0MC41IDEzNC4zLDEzOS45IDEzNC45LDEzOS41IDEzNS40LDEzOS4xIDEzNi4xLDEzOC43IDEzNi43LDEzOC40IDEzNy40LDEzOC4xIDEzOC4yLDEzOC4wIDEzOS4wLDEzNy45IDEzOS44LDEzNy44IDE0MC42LDEzNy45IDE0MS40LDEzOC4wIDE0Mi4yLDEzOC4yIDE0My4wLDEzOC41IDE0My44LDEzOC45IDE0NC42LDEzOS40IDE0NS4zLDEzOS45IDE0Ni4wLDE0MC42IDE0Ni42LDE0MS4zIDE0Ny4xLDE0Mi4wIDE0Ny42LDE0Mi45IDE0OC4wLDE0My43IDE0OC40LDE0NC43IDE0OC42LDE0NS43IDE0OC44LDE0Ni43IDE0OC44LDE0Ny43IDE0OC43LDE0OC44IDE0OC42LDE0OS44IDE0OC4zLDE1MC45IDE0Ny45LDE1MS45IDE0Ny41LDE1Mi45IDE0Ni45LDE1My45IDE0Ni4yLDE1NC44IDE0NS40LDE1NS43IDE0NC42LDE1Ni41IDE0My42LDE1Ny4yIDE0Mi42LDE1Ny44IDE0MS41LDE1OC40IDE0MC40LDE1OC44IDEzOS4xLDE1OS4xIDEzNy45LDE1OS4zIDEzNi42LDE1OS40IDEzNS4zLDE1OS40IDEzNC4wLDE1OS4yIDEzMi43LDE1OS4wIDEzMS40LDE1OC41IDEzMC4yLDE1OC4wIDEyOS4wLDE1Ny4zIDEyNy45LDE1Ni41IDEyNi44LDE1NS42IDEyNS44LDE1NC42IDEyNC45LDE1My41IDEyNC4xLDE1Mi4zIDEyMy40LDE1MS4wIDEyMi44LDE0OS43IDEyMi40LDE0OC4yIDEyMi4xLDE0Ni44IDEyMS45LDE0NS4yIDEyMS45LDE0My43IDEyMi4xLDE0Mi4yIDEyMi4zLDE0MC42IDEyMi44LDEzOS4xIDEyMy40LDEzNy42IDEyNC4xLDEzNi4yIDEyNS4wLDEzNC44IDEyNi4wLDEzMy41IDEyNy4xLDEzMi4zIDEyOC40LDEzMS4yIDEyOS43LDEzMC4yIDEzMS4yLDEyOS4zIDEzMi44LDEyOC42IDEzNC40LDEyOC4wIDEzNi4xLDEyNy42IDEzNy45LDEyNy4zIDEzOS42LDEyNy4zIDE0MS40LDEyNy4zIDE0My4yLDEyNy42IDE0NS4wLDEyOC4wIDE0Ni43LDEyOC42IDE0OC40LDEyOS40IDE1MC4xLDEzMC4zIDE1MS42LDEzMS40IDE1My4wLDEzMi43IDE1NC40LDEzNC4wIDE1NS42LDEzNS42IDE1Ni42LDEzNy4yIDE1Ny41LDEzOC45IDE1OC4yLDE0MC44IDE1OC44LDE0Mi43IDE1OS4yLDE0NC43IDE1OS40LDE0Ni43IDE1OS40LDE0OC43IDE1OS4yLDE1MC44IDE1OC44LDE1Mi44IDE1OC4yLDE1NC44IDE1Ny40LDE1Ni43IDE1Ni40LDE1OC42IDE1NS4zLDE2MC40IDE1NC4wLDE2Mi4xIDE1Mi41LDE2My43IDE1MC44LDE2NS4xIDE0OS4wLDE2Ni40IDE0Ny4xLDE2Ny41IDE0NS4xLDE2OC40IDE0My4wLDE2OS4xIDE0MC44LDE2OS42IDEzOC42LDE3MC4wIDEzNi4zLDE3MC4xIDEzNC4wLDE2OS45IDEzMS43LDE2OS42IDEyOS40LDE2OS4xIDEyNy4yLDE2OC4zIDEyNS4xLDE2Ny4zIDEyMy4wLDE2Ni4xIDEyMS4xLDE2NC43IDExOS4zLDE2My4yIDExNy42LDE2MS40IDExNi4xLDE1OS41IDExNC44LDE1Ny40IDExMy42LDE1NS4zIDExMi43LDE1My4wIDExMi4wLDE1MC42IDExMS41LDE0OC4xIDExMS4zLDE0NS42IDExMS4zLDE0My4wIDExMS42LDE0MC41IDExMi4wLDEzOC4wIDExMi44LDEzNS41IDExMy43LDEzMy4xIDExNC45LDEzMC43IDExNi4zLDEyOC41IDExOC4wLDEyNi41IDExOS44LDEyNC41IDEyMS44LDEyMi44IDEyNC4wLDEyMS4yIDEyNi40LDExOS44IDEyOC44LDExOC43IDEzMS40LDExNy44IDEzNC4xLDExNy4yIDEzNi44LDExNi44IDEzOS42LDExNi42IDE0Mi40LDExNi43IDE0NS4yLDExNy4xIDE0OC4wLDExNy44IDE1MC42LDExOC43IDE1My4zLDExOS45IDE1NS43LDEyMS4zIDE1OC4xLDEyMy4wIDE2MC4zLDEyNC45IDE2Mi4zLDEyNy4wIDE2NC4yLDEyOS4zIDE2NS44LDEzMS44IDE2Ny4xLDEzNC40IDE2OC4zLDEzNy4yIDE2OS4xLDE0MC4wIDE2OS43LDE0My4wIDE3MC4wLDE0Ni4wIiBmaWxsPSJub25lIiBzdHJva2U9IiNBMDYyMkUiIHN0cm9rZS13aWR0aD0iNiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+PGNpcmNsZSBjeD0iNDYiIGN5PSIxNjAiIHI9IjUiIGZpbGw9IiNGMkE3QzYiLz48Y2lyY2xlIGN4PSI2NCIgY3k9IjE3NiIgcj0iMyIgZmlsbD0iI0YyQTdDNiIvPjwvZz48L3N2Zz4=") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 24px bottom 16px !important;
+  background-size: 140px auto !important;
+}

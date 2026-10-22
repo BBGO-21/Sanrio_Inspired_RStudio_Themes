@@ -1,0 +1,262 @@
+/* rs-theme-name: Puppy Park */
+/* rs-theme-is-dark: FALSE */
+
+/* Palette
+   Background        #FAFBFF
+   Default text      #1E1E24
+   Keywords, section headers, errors (bold)  #1F5FBF
+   Functions         #A8352A
+   Strings           #6E5E00
+   Numbers, TRUE/FALSE/NULL  #2A7352
+   Comments (italic) #82828E
+   Accent: cursor, matching brackets, selected tab  #E0AE10
+   Nested parentheses  #1E1E24 / #55555F / #86878F
+*/
+
+/* ---------- Editor ---------- */
+.ace_editor,
+.rstudio-themes-flat.ace_editor_theme,
+.rstudio-themes-flat .ace_editor_theme {
+  background-color: #FAFBFF;
+  color: #1E1E24;
+}
+
+/* Gutter (line numbers) */
+.ace_gutter {
+  background-color: #EEF1F8;
+  color: #6E6E7A;
+}
+.ace_gutter-active-line {
+  background-color: #D9E3F5;
+  color: #1E1E24;
+}
+.ace_print-margin {
+  width: 1px;
+  background-color: #D0D6E6;
+}
+
+/* Cursor, selection, current line */
+.ace_cursor {
+  color: #E0AE10;
+}
+.ace_marker-layer .ace_selection {
+  background-color: #FBEFC4;
+}
+.ace_marker-layer .ace_active-line {
+  background-color: #EAF0FB;
+}
+.ace_marker-layer .ace_selected-word {
+  border: 1px solid #1F5FBF;
+}
+
+/* Matching brackets: underline */
+.ace_marker-layer .ace_bracket {
+  margin: 0;
+  border: none;
+  border-bottom: 2px solid #E0AE10;
+}
+
+/* Syntax */
+.ace_identifier {
+  color: #1E1E24;
+}
+.ace_keyword {
+  color: #1F5FBF;
+  font-weight: bold;
+}
+.ace_keyword.ace_operator {
+  color: #1E1E24;
+  font-weight: normal;
+}
+.ace_constant.ace_language,
+.ace_constant.ace_numeric {
+  color: #2A7352;
+}
+.ace_string {
+  color: #6E5E00;
+}
+.ace_support.ace_function {
+  color: #A8352A;
+}
+
+/* Comments: quieter */
+.ace_comment {
+  color: #82828E;
+  font-style: italic;
+}
+.ace_comment.ace_keyword {
+  color: #A8352A;
+  font-style: italic;
+}
+
+/* Section headers (# Title ----): bold landmarks */
+.ace_comment.ace_sectionhead {
+  color: #1F5FBF;
+  font-style: normal;
+  font-weight: bold;
+}
+
+/* Parentheses by nesting level
+   (turn on Rainbow parentheses in Global Options > Code > Display) */
+.ace_paren,
+.ace_paren_color_0,
+.ace_paren_color_3,
+.ace_paren_color_6 {
+  color: #1E1E24;
+}
+.ace_paren_color_1,
+.ace_paren_color_4 {
+  color: #55555F;
+}
+.ace_paren_color_2,
+.ace_paren_color_5 {
+  color: #86878F;
+}
+
+/* R Markdown / Quarto */
+.ace_marker-layer .ace_foreign_line {
+  background-color: #F0F4FD;
+}
+.ace_markup.ace_heading {
+  color: #1F5FBF;
+  font-weight: bold;
+}
+.ace_markup.ace_href {
+  color: #A8352A;
+  text-decoration: underline;
+}
+
+/* Console and debugging */
+.ace_console_error {
+  color: #1F5FBF;
+  font-weight: bold;
+}
+.ace_marker-layer .ace_active_debug_line {
+  background-color: #E8CFD0;
+}
+
+
+/* =====================================================================
+   RStudio interface (tabs, panes, toolbars, menus, scrollbars)
+   These use RStudio's internal class names, which are not officially
+   supported and may change between versions. If an update breaks
+   something, delete this section and the editor colors above still work.
+   ===================================================================== */
+
+/* Space behind and between panes, and the strip under the main toolbar */
+body.rstudio-themes-flat,
+.rstudio-themes-flat.rstudio-themes-dark,
+.rstudio-themes-flat .rstudio-themes-dark,
+.rstudio-themes-flat .rstudio-themes-default,
+.rstudio-themes-flat .rstudio-themes-background,
+.rstudio-themes-flat [role="banner"] + [role="navigation"] > table > tbody > tr > td,
+.rstudio-themes-flat header + [role="navigation"] > table > tbody > tr > td,
+.rstudio-themes-flat .gwt-SplitLayoutPanel-HDragger,
+.rstudio-themes-flat .gwt-SplitLayoutPanel-VDragger {
+  background-color: #DEE3EF !important;
+}
+
+/* Pane frames, including the focus ring around the active pane */
+.rstudio-themes-flat .windowframe,
+.rstudio-themes-flat .windowframe:focus-within,
+.rstudio-themes-flat .windowframe > div,
+.rstudio-themes-flat .rstudio-themes-border,
+.rstudio-themes-flat :-webkit-any(.windowframe, .rstheme_minimizedWindowObject) > div:last-child {
+  border-color: #D0D6E6 !important;
+  outline-color: #D0D6E6 !important;
+  box-shadow: none !important;
+}
+.rstudio-themes-flat *:focus,
+.rstudio-themes-flat *:focus-visible {
+  outline-color: #E0AE10 !important;
+}
+
+/* Tab strip */
+.rstudio-themes-flat .gwt-TabLayoutPanelTabs,
+.rstudio-themes-flat .rstheme_multiPodUtilityTabArea {
+  background-color: #EEF1F8 !important;
+}
+
+/* Unselected tabs: quiet */
+.rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .rstheme_tabLayoutCenter {
+  background-color: #EEF1F8 !important;
+  border-top: 2px solid transparent !important;
+}
+.rstudio-themes-flat .gwt-TabLayoutPanelTab:not(.gwt-TabLayoutPanelTab-selected) .gwt-Label {
+  color: #6E6E7A !important;
+}
+.rstudio-themes-flat .gwt-TabLayoutPanelTab:hover .rstheme_tabLayoutCenter {
+  background-color: #E4E8F2 !important;
+}
+
+/* Selected tab: matches the editor, with an accent top bar */
+.rstudio-themes-flat .gwt-TabLayoutPanelTab.gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter,
+.rstudio-themes-flat .windowframe:focus-within .gwt-TabLayoutPanelTab-selected .rstheme_tabLayoutCenter {
+  background-color: #FAFBFF !important;
+  border-top: 2px solid #E0AE10 !important;
+  border-left-color: #D0D6E6 !important;
+  border-right-color: #D0D6E6 !important;
+}
+.rstudio-themes-flat .gwt-TabLayoutPanelTab-selected .gwt-Label {
+  color: #1E1E24 !important;
+  font-weight: bold;
+}
+
+/* Minimized panes */
+.rstudio-themes-flat .rstheme_minimizedWindowObject .rstheme_center {
+  background-color: #EEF1F8 !important;
+}
+
+/* Toolbars */
+.rstudio-themes-flat .rstheme_toolbarWrapper,
+.rstudio-themes-flat .rstheme_secondaryToolbar,
+.rstudio-themes-flat .dataGridHeader {
+  background-color: #EEF1F8 !important;
+  border-color: #D0D6E6 !important;
+}
+.rstudio-themes-flat .rstheme_toolbarWrapper .gwt-Label,
+.rstudio-themes-flat .rstheme_toolbarWrapper a,
+.rstudio-themes-flat .rstheme_toolbarWrapper button {
+  color: #1E1E24 !important;
+}
+
+/* Menus and popups */
+.rstudio-themes-flat .popupMiddleCenter,
+.rstudio-themes-flat .menuPopupMiddleCenter,
+.rstudio-themes-flat .suggestPopupMiddleCenter,
+.rstudio-themes-flat .themedPopupPanel,
+.rstudio-themes-flat .gwt-PopupPanel .popupContent {
+  background-color: #EEF1F8 !important;
+  color: #1E1E24 !important;
+}
+.rstudio-themes-flat .gwt-MenuItem.gwt-MenuItem-selected,
+.rstudio-themes-flat .item.item-selected {
+  background-color: #FBEFC4 !important;
+  color: #1E1E24 !important;
+}
+
+/* Scrollbars */
+.rstudio-themes-flat {
+  scrollbar-color: #B8BCCB #EEF1F8;
+}
+.rstudio-themes-flat ::-webkit-scrollbar-track {
+  background-color: #EEF1F8;
+}
+.rstudio-themes-flat ::-webkit-scrollbar-thumb {
+  background-color: #B8BCCB;
+  border-radius: 6px;
+}
+.rstudio-themes-flat ::-webkit-scrollbar-thumb:hover {
+  background-color: #8A8D99;
+}
+
+
+/* Corner doodle in the console (original artwork). Delete this block to remove it.
+   Targets the scrolling area that holds RStudio's console output. RStudio does not
+   document these IDs, so this is a best guess. */
+.rstudio-themes-flat :has(> #rstudio_console_output) {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMDAgMjAwIj48ZyBvcGFjaXR5PSIwLjU1Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSg3MCwxNTApIHJvdGF0ZSgtMjApIHNjYWxlKDEuOCkiIGZpbGw9IiMxRjVGQkYiPjxlbGxpcHNlIGN4PSIwIiBjeT0iNiIgcng9IjEwIiByeT0iOCIvPjxlbGxpcHNlIGN4PSItMTEiIGN5PSItNiIgcng9IjQiIHJ5PSI1Ii8+PGVsbGlwc2UgY3g9Ii00IiBjeT0iLTEyIiByeD0iNCIgcnk9IjUiLz48ZWxsaXBzZSBjeD0iNCIgY3k9Ii0xMiIgcng9IjQiIHJ5PSI1Ii8+PGVsbGlwc2UgY3g9IjExIiBjeT0iLTYiIHJ4PSI0IiByeT0iNSIvPjwvZz48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxMTgsMTA0KSByb3RhdGUoLTEwKSBzY2FsZSgxLjUpIiBmaWxsPSIjMUY1RkJGIj48ZWxsaXBzZSBjeD0iMCIgY3k9IjYiIHJ4PSIxMCIgcnk9IjgiLz48ZWxsaXBzZSBjeD0iLTExIiBjeT0iLTYiIHJ4PSI0IiByeT0iNSIvPjxlbGxpcHNlIGN4PSItNCIgY3k9Ii0xMiIgcng9IjQiIHJ5PSI1Ii8+PGVsbGlwc2UgY3g9IjQiIGN5PSItMTIiIHJ4PSI0IiByeT0iNSIvPjxlbGxpcHNlIGN4PSIxMSIgY3k9Ii02IiByeD0iNCIgcnk9IjUiLz48L2c+PGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNjAsNzApIHJvdGF0ZSgtMjUpIHNjYWxlKDEuMikiIGZpbGw9IiM1NTU1NUYiPjxlbGxpcHNlIGN4PSIwIiBjeT0iNiIgcng9IjEwIiByeT0iOCIvPjxlbGxpcHNlIGN4PSItMTEiIGN5PSItNiIgcng9IjQiIHJ5PSI1Ii8+PGVsbGlwc2UgY3g9Ii00IiBjeT0iLTEyIiByeD0iNCIgcnk9IjUiLz48ZWxsaXBzZSBjeD0iNCIgY3k9Ii0xMiIgcng9IjQiIHJ5PSI1Ii8+PGVsbGlwc2UgY3g9IjExIiBjeT0iLTYiIHJ4PSI0IiByeT0iNSIvPjwvZz48Y2lyY2xlIGN4PSIxNTAiIGN5PSIxNjAiIHI9IjI4IiBmaWxsPSIjRjdEMDRBIi8+PHBhdGggZD0iTTEyOCwxNDUgUTE1MCwxNjAgMTI4LDE3OCBNMTcyLDE0MiBRMTUwLDE2MCAxNzIsMTc4IiBzdHJva2U9IiNDOThBMUEiIHN0cm9rZS13aWR0aD0iNCIgZmlsbD0ibm9uZSIvPjwvZz48L3N2Zz4=") !important;
+  background-repeat: no-repeat !important;
+  background-position: right 24px bottom 16px !important;
+  background-size: 140px auto !important;
+}
